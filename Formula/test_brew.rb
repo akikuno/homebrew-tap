@@ -10,4 +10,3 @@ class TestBrew < Formula
   end
 
 end
-end
