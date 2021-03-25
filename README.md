@@ -5,7 +5,7 @@
 
 ```
 # Setup ----------------------
-version=0.0.7
+version=0.0.8
 file="https://github.com/akikuno/test_brew/archive/refs/tags/${version}.tar.gz"
 cmd_name="test_brew"
 export HOMEBREW_EDITOR="code"
@@ -30,8 +30,8 @@ brew install akikuno/tap/"$cmd_name"
 ## コマンド実行
 
 ```
-ls -l /home/linuxbrew/.linuxbrew/Cellar/test_brew/0.0.6/bin
-test_brew
+ls -l /home/linuxbrew/.linuxbrew/Cellar/test_brew/"${version}"/bin
+test_brew hoge
 ```
 
 ## メモ
