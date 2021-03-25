@@ -5,13 +5,12 @@
 
 ```
 # Setup ----------------------
-file="https://github.com/akikuno/test_brew/archive/refs/tags/0.0.4.tar.gz"
+file="https://github.com/akikuno/test_brew/archive/refs/tags/0.0.5.tar.gz"
 cmd_name="test_brew"
 export HOMEBREW_EDITOR="code"
 
 # brew tap ----------------------
 
-brew uninstall test_brew
 brew untap akikuno/tap
 brew tap-new akikuno/tap
 
@@ -21,6 +20,7 @@ brew create --tap akikuno/tap --set-name "$cmd_name" "$file"
 # brew edit akikuno/tap/"$cmd_name"
 
 brew untap akikuno/tap
+brew uninstall test_brew
 brew install akikuno/tap/"$cmd_name"
 
 ```
