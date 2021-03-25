@@ -4,7 +4,7 @@
 class TestBrew < Formula
   desc ""
   homepage ""
-  url "https://github.com/akikuno/test_brew/releases/download/0.0.3/test_brew"
+  url "https://github.com/akikuno/test_brew/archive/refs/tags/0.0.3.tar.gz"
   sha256 "3d9e1578d63005f4dc7b6cc93a4d4acb9f54efcbc526d53a0e681e30cd6b5de3"
   license ""
 
