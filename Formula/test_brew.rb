@@ -4,5 +4,6 @@ class TestBrew < Formula
   license "MIT"
   def install
     bin.install "test_brew"
+    bin.install Dir["src/*"]
   end
 end
