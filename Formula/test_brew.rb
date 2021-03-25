@@ -4,5 +4,6 @@ class TestBrew < Formula
   license "MIT"
   def install
     prefix.install Dir["*"]
+    bin.install test_brew
   end
 end

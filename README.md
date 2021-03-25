@@ -28,6 +28,7 @@ brew install akikuno/tap/"$cmd_name"
 ## コマンド実行
 
 ```
+ls -l /home/linuxbrew/.linuxbrew/Cellar/test_brew/0.0.5
 test_brew
 ```
 
