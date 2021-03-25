@@ -5,12 +5,13 @@
 
 ```
 export HOMEBREW_EDITOR="code"
+brew uninstall test_brew
 brew untap akikuno/tap
 brew tap-new akikuno/tap
 
 brew create --tap akikuno/tap \
   --set-name test_brew \
-  "https://github.com/akikuno/test_brew/archive/refs/tags/0.0.3.tar.gz"
+  "https://github.com/akikuno/test_brew/archive/refs/tags/0.0.4.tar.gz"
 
 # brew edit akikuno/tap/test_brew
 

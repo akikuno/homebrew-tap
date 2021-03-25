@@ -1,8 +1,8 @@
 class TestBrew < Formula
   desc ""
   homepage ""
-  url "https://github.com/akikuno/test_brew/archive/refs/tags/0.0.3.tar.gz"
-  sha256 "8161e62ddfb3835b18550222f249f45e732c502a56dfb8ed536b065df79e5bdc"
+  url "https://github.com/akikuno/test_brew/archive/refs/tags/0.0.4.tar.gz"
+  sha256 "2ce71bed776b5db23dd70d00f553d3c7eea920ae6bb2bbf440407cc5566c779c"
   license "MIT"
 
   def install
