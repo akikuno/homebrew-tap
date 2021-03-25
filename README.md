@@ -19,8 +19,8 @@ brew tap-new akikuno/tap
 brew create --tap akikuno/tap --set-name "$cmd_name" "$file"
 # brew edit akikuno/tap/"$cmd_name"
 
-brew untap akikuno/tap
 brew uninstall test_brew
+brew untap akikuno/tap
 brew install akikuno/tap/"$cmd_name"
 
 ```
