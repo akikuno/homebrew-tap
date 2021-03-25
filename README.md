@@ -3,10 +3,16 @@
 >Homebrewでformulaの作成
 >https://blog.ottijp.com/2020/05/23/homebrew-make-formula/
 
+```
+export HOMEBREW_EDITOR="code"
 brew tap-new akikuno/tap
 
 brew create --tap akikuno/tap \
---set-name test_echo "https://github.com/akikuno/test_brew/archive/refs/tags/0.0.1.tar.gz"
+  --set-name test_brew \
+  "https://github.com/akikuno/test_brew/releases/download/0.0.3/test_brew"
 
-export HOMEBREW_EDITOR="code"
-brew edit akikuno/tap/test_echo
+brew edit akikuno/tap/test_brew
+
+brew tap akikuno/tap
+brew install test_echo
+```

@@ -1,23 +1,22 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class TestEcho < Formula
+class TestBrew < Formula
   desc ""
   homepage ""
-  url "https://github.com/akikuno/test_brew/archive/refs/tags/0.0.1.tar.gz"
-  sha256 "c1de6de8583ba5469aa894f4177fec35c76de08b0a6f55239b5a164049feb27d"
+  url "https://github.com/akikuno/test_brew/releases/download/0.0.3/test_brew"
+  sha256 "3d9e1578d63005f4dc7b6cc93a4d4acb9f54efcbc526d53a0e681e30cd6b5de3"
   license "MIT"
 
   # depends_on "cmake" => :build
 
   def install
+    bin.install "test_brew"
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    # system "cmake", ".", *std_cmake_args
+    # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
+    system "./configure", *std_configure_args, "--disable-silent-rules"
+    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
   end
 
   test do
@@ -25,7 +24,7 @@ class TestEcho < Formula
     #
     # This test will fail and we won't accept that! For Homebrew/homebrew-core
     # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test test_echo`. Options passed
+    # software. Run the test with `brew test test_brew`. Options passed
     # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
     #
     # The installed folder is not in the path, so use the entire path to any
