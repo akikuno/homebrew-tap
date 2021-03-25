@@ -6,7 +6,7 @@ class TestBrew < Formula
   homepage ""
   url "https://github.com/akikuno/test_brew/releases/download/0.0.3/test_brew"
   sha256 "3d9e1578d63005f4dc7b6cc93a4d4acb9f54efcbc526d53a0e681e30cd6b5de3"
-  license "MIT"
+  license ""
 
   # depends_on "cmake" => :build
 

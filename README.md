@@ -5,6 +5,7 @@
 
 ```
 export HOMEBREW_EDITOR="code"
+brew untap akikuno/tap
 brew tap-new akikuno/tap
 
 brew create --tap akikuno/tap \
@@ -14,5 +15,5 @@ brew create --tap akikuno/tap \
 brew edit akikuno/tap/test_brew
 
 brew tap akikuno/tap
-brew install test_echo
+brew install akikuno/tap/test_brew
 ```
