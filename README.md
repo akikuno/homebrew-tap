@@ -10,10 +10,10 @@ brew tap-new akikuno/tap
 
 brew create --tap akikuno/tap \
   --set-name test_brew \
-  "https://github.com/akikuno/test_brew/releases/download/0.0.3/test_brew"
+  "https://github.com/akikuno/test_brew/archive/refs/tags/0.0.3.tar.gz"
 
-brew edit akikuno/tap/test_brew
+# brew edit akikuno/tap/test_brew
 
-brew tap akikuno/tap
+brew untap akikuno/tap
 brew install akikuno/tap/test_brew
 ```
