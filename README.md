@@ -4,25 +4,38 @@
 >https://blog.ottijp.com/2020/05/23/homebrew-make-formula/
 
 ```
+# Setup ----------------------
+file="https://github.com/akikuno/test_brew/archive/refs/tags/0.0.4.tar.gz"
+cmd_name="test_brew"
 export HOMEBREW_EDITOR="code"
+
+# brew tap ----------------------
+
 brew uninstall test_brew
 brew untap akikuno/tap
 brew tap-new akikuno/tap
 
-brew create --tap akikuno/tap \
-  --set-name test_brew \
-  "https://github.com/akikuno/test_brew/archive/refs/tags/0.0.4.tar.gz"
-
-# brew edit akikuno/tap/test_brew
+# create Formula ----------------------
+## Copy class name
+brew create --tap akikuno/tap --set-name "$cmd_name" "$file"
+# brew edit akikuno/tap/"$cmd_name"
 
 brew untap akikuno/tap
-brew install akikuno/tap/test_brew
-
-# コマンド実行
-
-test_brew
+brew install akikuno/tap/"$cmd_name"
 
 ```
 
+## コマンド実行
+
+```
+test_brew
+```
+
 ## メモ
-+ 
++ sha256の確認方法
+```
+file="https://github.com/akikuno/test_brew/archive/refs/tags/0.0.4.tar.gz"
+wget "$file"
+sha256sum "${file##*/}"
+rm "${file##*/}"
+```
