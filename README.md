@@ -18,9 +18,11 @@ brew create --tap akikuno/tap \
 brew untap akikuno/tap
 brew install akikuno/tap/test_brew
 
+# コマンド実行
 
-brew install Songmu/tap/maltmill
-which maltmill
-maltmill new -w motemen/ghq
-maltmill -w Formula/ghq.rb
+test_brew
+
 ```
+
+## メモ
++ 
